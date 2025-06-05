@@ -18,7 +18,7 @@ jobs:
       env:
         DockeruserName: ${{secrets.DOCKERUSERNAME}}
         DockerPassWord: ${{secrets.DOCKERPASSWORD}}
-      run: docker login -u DockeruserName -p DockerPassWord
+      run: docker login -u DockeruserName --password-stdin DockerPassWord
 
     - name: build docker Image
       run: docker build -t docker-push .
