@@ -23,7 +23,7 @@ jobs:
     - name: build docker Image
       run: docker build -t docker-push .
 
-    - name: docker push into the repository
+    - name: push to dockerhub
       run: docker push bala04031999/docker-push:latest 
       
     
