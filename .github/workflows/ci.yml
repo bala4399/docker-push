@@ -24,7 +24,7 @@ jobs:
       run: docker build -t docker-push .
 
     - name: docker push into the repository
-      run: docker push bala4399/docker-push:latest 
+      run: docker push bala04031999/docker-push:latest 
       
     
         
