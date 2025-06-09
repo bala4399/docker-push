@@ -21,7 +21,7 @@ jobs:
       run: echo "$DockerPassWord" | docker login -u "$DockeruserName" --password-stdin #security
 
     - name: build docker Image
-      run: docker build -t docker-push .
+      run: docker build -t bala04031999/docker-push .
 
     - name: push to dockerhub
       run: docker push bala04031999/docker-push:latest 
