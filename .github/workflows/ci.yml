@@ -18,8 +18,8 @@ jobs:
       env:
         DockeruserName: ${{ secrets.DOCKERUSERNAME }}
         DockerPassWord: ${{ secrets.DOCKERPASSWORD }}
-      run: echo "$DockerPassWord" | docker login -u "$DockeruserName" --password-stdin #security
-
+      # run: echo "$DockerPassWord" | docker login -u "$DockeruserName" --password-stdin #security
+      run: docker login -u $DockeruserName -p $DockerPassWord #security
     - name: build docker Image
       run: docker build -t bala04031999/docker-push .
 
